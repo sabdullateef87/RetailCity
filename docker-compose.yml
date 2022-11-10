@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  mysql-db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 'retailcity123'
+      MYSQL_PASSWORD: retailcity123
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+
+  test-db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 'retailcity123'
+      MYSQL_PASSWORD: retailcity123
+    ports:
+      - '3307:3306'
+    expose:
+      - '3306'
