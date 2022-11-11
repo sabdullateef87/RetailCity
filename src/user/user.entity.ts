@@ -1,3 +1,4 @@
+import { IsNotEmpty } from "class-validator";
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 export enum UserRole {
@@ -14,15 +15,19 @@ export class User {
     user_id: number
 
     @Column({nullable: false})
+    @IsNotEmpty()
     firstname: string
 
     @Column({nullable: false})
+    @IsNotEmpty()
     lastname: string
 
     @Column({unique: true})
+    @IsNotEmpty()
     email:string
 
     @Column({nullable: false})
+    @IsNotEmpty()
     password:string
 
     @Column({
