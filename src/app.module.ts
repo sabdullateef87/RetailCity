@@ -15,15 +15,15 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
-    AuthModule, 
-    UserModule, 
-    CategoryModule, 
-    ProductModule, 
-    StoreModule, 
-    PaymentModule, 
+    AuthModule,
+    UserModule,
+    CategoryModule,
+    ProductModule,
+    StoreModule,
+    PaymentModule,
     DatabaseModule
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

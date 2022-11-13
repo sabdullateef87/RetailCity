@@ -1,3 +1,4 @@
+import { Exclude } from "class-transformer";
 import { IsNotEmpty } from "class-validator";
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
@@ -14,21 +15,22 @@ export class User {
     @PrimaryGeneratedColumn("uuid")
     user_id: number
 
-    @Column({nullable: false})
+    @Column({ nullable: false })
     @IsNotEmpty()
     firstname: string
 
-    @Column({nullable: false})
+    @Column({ nullable: false })
     @IsNotEmpty()
     lastname: string
 
-    @Column({unique: true})
+    @Column({ unique: true })
     @IsNotEmpty()
-    email:string
+    email: string
 
-    @Column({nullable: false})
+    @Column({ nullable: false })
     @IsNotEmpty()
-    password:string
+    @Exclude()
+    password: string
 
     @Column({
         type: "enum",
