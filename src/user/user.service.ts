@@ -22,7 +22,7 @@ export class UserService {
 
     }
     public async suspendUser() {
-
+        
     }
 
     private buildUserFromDto(user: CreateUserDto): User {
