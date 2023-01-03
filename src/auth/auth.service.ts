@@ -80,7 +80,7 @@ export class AuthService {
             await this.verifyPassword(password, user?.password)
             return user
         } catch (err) {
-            throw new HttpException("Wrong credentials", HttpStatus.BAD_REQUEST);
+            throw new HttpException("Wrong credentials !", HttpStatus.BAD_REQUEST);
         }
 
     }
